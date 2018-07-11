@@ -5,6 +5,18 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
 
+    <dimen name="pad_5">5dp</dimen>
+    <dimen name="pad_2">2dp</dimen>
+    <dimen name="pad_3">8dp</dimen>
+    <dimen name="pad_8">8dp</dimen>
+    <dimen name="pad_10">10dp</dimen>
+    <dimen name="pad_12">12dp</dimen>
+    <dimen name="pad_14">14dp</dimen>
+    <dimen name="pad_16">16dp</dimen>
+    <dimen name="pad_18">18dp</dimen>
+    <dimen name="pad_20">20dp</dimen>
+
+
     <dimen name="txt_8">8sp</dimen>
     <dimen name="txt_10">10sp</dimen>
     <dimen name="txt_12">12sp</dimen>

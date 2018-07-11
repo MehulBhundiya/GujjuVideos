@@ -26,4 +26,5 @@ dependencies {
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.google.firebase:firebase-ads:15.0.1'
 }

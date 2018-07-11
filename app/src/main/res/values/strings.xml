@@ -9,4 +9,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="ok">Ok</string>
     <string name="check_internet">Please check your internet connection.</string>
+
+    <!-- BANNER -->
+    <string name="main_banner">ca-app-pub-3012042458641509/4303278188</string>
 </resources>
