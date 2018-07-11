@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Gujju Videos</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="history">History</string>
+    <string name="disc">Disclaimer</string>
+    <string name="share">Share</string>
+    <string name="rate">Rate</string>
+    <string name="communicate">Communicate</string>
+    <string name="nav_header_desc">Navigation header</string>
+</resources>
