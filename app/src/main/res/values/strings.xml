@@ -7,4 +7,6 @@
     <string name="rate">Rate</string>
     <string name="communicate">Communicate</string>
     <string name="nav_header_desc">Navigation header</string>
+    <string name="ok">Ok</string>
+    <string name="check_internet">Please check your internet connection.</string>
 </resources>
