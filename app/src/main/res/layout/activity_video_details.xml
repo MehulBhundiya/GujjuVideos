@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="top"
+        android:background="@color/colorPrimary"
+        android:theme="@style/Theme.Toolbar.Custom"
+        app:contentInsetStart="0.0dip"
+        app:contentInsetStartWithNavigation="0.0dip"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:subtitleTextColor="@color/colorWhite"
+        app:titleTextColor="@color/colorWhite" />
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <View xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/viewTopBar"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:background="@color/colorAccent"
+                app:layout_constraintDimensionRatio="H,1:0.28"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="10.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/framlayoutVideoHolder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_marginRight="16.0dip"
+                    android:background="@color/colorWhite">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <FrameLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="0.0dip"
+                                android:background="@color/colorWhite"
+                                android:scaleType="fitXY"
+                                android:visibility="visible"
+                                app:layout_constraintDimensionRatio="H,1:0.56"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <fragment
+                                    android:id="@+id/youtube_fragment"
+                                    android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent" />
+
+                                <ImageView
+                                    android:id="@+id/imgSongDetails"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:background="@color/placeholder_bg"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/placeholder_trailer"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/imgPlayIco"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_play_video" />
+                            </FrameLayout>
+                        </android.support.constraint.ConstraintLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="50.0dip"
+                            android:orientation="horizontal">
+
+                            <com.videos.gujjuvideo.cutom_view.TextViewSemiBold
+                                android:id="@+id/txtTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="16.0dip"
+                                android:layout_marginRight="16.0dip"
+                                android:layout_marginTop="2.0dip"
+                                android:layout_weight="1.0"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="#ff1d1d1d"
+                                android:textSize="14.0sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5.0dip"
+                                android:src="@drawable/eye" />
+
+                            <com.videos.gujjuvideo.cutom_view.TextViewSemiBold
+                                android:id="@+id/txtViewCountVideoDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="8.0dip"
+                                android:layout_marginTop="2.0dip"
+                                android:lineSpacingExtra="6.799988sp"
+                                android:text="0"
+                                android:textColor="#ff000000"
+                                android:textSize="11.299988sp" />
+
+                            <ImageView
+                                android:id="@+id/imgFavVideo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:paddingLeft="10.0dip"
+                                android:paddingRight="10.0dip"
+                                android:src="@drawable/like" />
+
+                            <ImageView
+                                android:id="@+id/imgWatchLaterVideo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:paddingLeft="10.0dip"
+                                android:paddingRight="10.0dip"
+                                android:src="@drawable/watch" />
+
+                            <ImageView
+                                android:id="@+id/imgShareVideo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_marginRight="8.0dip"
+                                android:paddingLeft="10.0dip"
+                                android:paddingRight="10.0dip"
+                                android:src="@drawable/share" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutRecyclerGitMahitiVideoDetails"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="20.0dip"
+                        android:layout_marginBottom="10.0dip"
+                        android:layout_marginLeft="16.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:layout_marginTop="20.0dip"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="4.0dip"
+                            android:layout_height="fill_parent"
+                            android:background="@color/colorAccent" />
+
+                        <com.videos.gujjuvideo.cutom_view.TextViewBold
+                            android:id="@+id/txtMahitiDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_weight="1.0"
+                            android:text="માહિતી"
+                            android:textColor="#ff000000"
+                            android:textSize="14.0sp" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewRound"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:minHeight="100.0dip"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:scrollbars="none" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="20.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_marginRight="16.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="4.0dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/colorAccent" />
+
+                    <com.videos.gujjuvideo.cutom_view.TextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_weight="1.0"
+                        android:text="આર્ટિસ્ટ"
+                        android:textColor="#ff000000"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewArtistVideoDetails"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip"
+                    android:scrollbars="none"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/layoutRecyclerRelatedVideoDetails"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="20.0dip"
+                        android:layout_marginBottom="10.0dip"
+                        android:layout_marginLeft="16.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:layout_marginTop="20.0dip"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="4.0dip"
+                            android:layout_height="fill_parent"
+                            android:background="@color/colorAccent" />
+
+                        <com.videos.gujjuvideo.cutom_view.TextViewBold
+                            android:id="@+id/txtVadhuVideosDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_weight="1.0"
+                            android:text="વધુ વિડિઓ"
+                            android:textColor="#ff000000"
+                            android:textSize="14.0sp" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewSongsVideoDetails"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:paddingTop="10.0dip"
+                        android:scrollbars="none" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+</LinearLayout>
